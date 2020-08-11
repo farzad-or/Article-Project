@@ -11,44 +11,44 @@ const router = express.Router();
 
 const checkSession = (req, res, next) => {
   if (!req.session.user) {
-      res.redirect("/api/signIn");
+    res.redirect("/api/signIn");
   }
   next()
 }
 
-const checkAdminSession = async (req, res, next) => {
-  try {
-      let admin = await User.find({ role: "admin" })
-      for (let i = 0, n = admin.length; i < n; i++) {
+// const checkAdminSession = async (req, res, next) => {
+//   try {
+//       let admin = await User.find({ role: "admin" })
+//       for (let i = 0, n = admin.length; i < n; i++) {
 
-          if (!req.session.user || req.session.user._id != admin[i]._id) {
-              console.log("omad");
-              return res.redirect("/api/signIn");
-          }
+//           if (!req.session.user || req.session.user._id != admin[i]._id) {
+//               console.log("omad");
+//               return res.redirect("/api/signIn");
+//           }
 
-      }
-  } catch (error) {
-      console.log(error);
-      return res.status(403).json("forbidden")
-  }
-  next()
+//       }
+//   } catch (error) {
+//       console.log(error);
+//       return res.status(403).json("forbidden")
+//   }
+//   next()
 
-}
+// }
 
 
-router.use('/dashboard',checkSession,  userDashboard);
-router.use('/article',checkSession,  articleRouter);
-router.use('/admin', checkAdminSession, admin);
+// router.use('/dashboard',checkSession,  userDashboard);
+// router.use('/article',checkSession,  articleRouter);
+// router.use('/admin', checkAdminSession, admin);
 
 
 
 //check is log in before or not
-const isLogin = (req, res, next) => {
-  if (req.session.user) {
-      res.redirect('/api/dashboard')
-  }
-  next()
-}
+// const isLogin = (req, res, next) => {
+//   if (req.session.user) {
+//       res.redirect('/api/dashboard')
+//   }
+//   next()
+// }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -56,19 +56,12 @@ const isLogin = (req, res, next) => {
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
+router.get("/signIn", (req, res) => {
+  res.render("pages/signIn")
+})
 
 router.get("/signUp", (req, res) => {
-  res.cookie("theme", "light");
-  req.cookies.theme = "light"
-  res.render("pages/signUp", {
-      message: (req.cookies.lang === "EN") ? "welcome! please insert required information and hit the sign up button." : "خوش آمدید! لطفا اطلاعات خواسته شده را وارد کنید و سپس دکمه ثبت نام را بزنید",
-      theme: req.cookies.theme,
-      className: "alert alert-light",
-      lang: req.cookies.lang
-  })
+  res.render("pages/signUp")
 })
 
 
@@ -101,10 +94,7 @@ router.post('/signup', async function (req, res) {
     }
   } catch (error) {
     res.send(error.message)
-
   }
-
-
 });
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
