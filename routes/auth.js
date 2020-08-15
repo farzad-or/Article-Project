@@ -9,12 +9,12 @@ const router = express.Router();
 ////////////////////////////////////////session check/////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-const checkSession = (req, res, next) => {
-  if (!req.session.user) {
-    res.redirect("/api/signIn");
-  }
-  next()
-}
+// const checkSession = (req, res, next) => {
+//   if (!req.session.user) {
+//     res.redirect("/api/signIn");
+//   }
+//   next()
+// }
 
 // const checkAdminSession = async (req, res, next) => {
 //   try {
@@ -55,9 +55,11 @@ const checkSession = (req, res, next) => {
 ////////////////////////////////////////setting up sign up requests///////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
+console.log("salam");
 
 router.get("/signIn", (req, res) => {
   res.render("pages/signIn")
+  console.log("bye");
 })
 
 router.get("/signUp", (req, res) => {
@@ -144,7 +146,9 @@ router.post('/signup', async function (req, res) {
 ///////////////////////////////////// search end point ///////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-
+router.get("/aboutUs",(req,res)=>{
+  res.render("pages/aboutUs")
+})
 
 
 

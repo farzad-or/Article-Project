@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include("partials/header.ejs") %>
+
+</head>
+
+<body>
+    <header class="primary">
+        <div class="firstbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="brand">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="Magz Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <form class="search" autocomplete="off">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" name="q" class="form-control"
+                                        placeholder="جستجوی عبارت مورد نظر ...">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-primary">
+                                            <a class="ion-search text-white" href="search.html"></a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="help-block mt-2">
+                                <div>محبوب ترین ها : </div>
+                                <ul>
+                                    <li><a href="#">کرونا</a></li>
+                                    <li><a href="#">قیمت ارز</a></li>
+                                    <li><a href="#">فوتبال</a></li>
+                                    <li><a href="#">آلودگی هوا</a></li>
+                                    <li><a href="#">برجام</a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 text-right">
+                        <ul class="nav-icons">
+                            <li><a href="register.html"><i class="ion-person-add"></i>
+                                    <div>ثبت نام</div>
+                                </a></li>
+                            <li><a href="login.html"><i class="ion-person"></i>
+                                    <div>ورود</div>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start nav -->
+        <nav class="menu">
+            <%- include("partials/navbar.ejs") %>
+
+        </nav>
+        <!-- End nav -->
+    </header>
+
+    <section class="page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb d-flex justify-content-center">
+                        <li><a href="index.html">خانه</a></li>
+                        <li class="active">درباره ما</li>
+                    </ol>
+                    <h1 class="page-title text-center">درباره ما</h1>
+                    <div class="line thin"></div>
+                    <div class="page-description">
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                        </p>
+
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی
+                            نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی
+                            نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی
+                            نامفهوم
+                        </p>
+
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی
+                            نامفهوملورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی
+                            نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی
+                            نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی
+                            نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                        </p>
+                        <div class="question">
+                            سوالی دارید ؟ <a href="contact.html" class="btn btn-primary">تماس با ما</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start footer -->
+    <footer class="footer">
+        <%- include("partials/footer.ejs") %>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- JS -->
+    <%- include("partials/scripts.ejs") %>
+
+</body>
+
+</html>

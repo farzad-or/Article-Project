@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include("partials/header.ejs") %>
+
+</head>
+
+<body>
+	<header class="primary">
+		<div class="firstbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-12 col-sm-12">
+						<div class="brand">
+							<a href="index.html">
+								<img src="images/logo.png" alt="Magz Logo">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<form class="search" autocomplete="off">
+							<div class="form-group">
+								<div class="input-group">
+									<input type="text" name="q" class="form-control"
+										placeholder="جستجوی عبارت مورد نظر ...">
+									<div class="input-group-btn">
+										<button class="btn btn-primary">
+											<a class="ion-search text-white" href="search.html"></a>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="help-block mt-2">
+								<div>محبوب ترین ها : </div>
+								<ul>
+									<li><a href="#">کرونا</a></li>
+									<li><a href="#">قیمت ارز</a></li>
+									<li><a href="#">فوتبال</a></li>
+									<li><a href="#">آلودگی هوا</a></li>
+									<li><a href="#">برجام</a></li>
+								</ul>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-3 col-md-12 col-sm-12 text-right">
+						<ul class="nav-icons">
+							<li><a href="register.html"><i class="ion-person-add"></i>
+									<div>ثبت نام</div>
+								</a></li>
+							<li><a href="login.html"><i class="ion-person"></i>
+									<div>ورود</div>
+								</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Start nav -->
+		<nav class="menu">
+            <%- include("partials/navbar.ejs") %>
+
+		</nav>
+		<!-- End nav -->
+	</header>
+
+	<section class="login first grey">
+		<div class="container">
+			<div class="box-wrapper">
+				<div class="box box-border">
+					<div class="box-body">
+						<h4 class="text-dark text-center text-xlarge mb-5">صفحه ثبت نام</h4>
+						<form>
+							<div class="form-group">
+								<label>نام کاربری</label>
+								<input type="text" name="" class="form-control text-left">
+							</div>
+							<div class="form-group">
+								<label>ایمیل</label>
+								<input type="text" name="email" class="form-control text-left">
+							</div>
+							<div class="form-group">
+								<label class="fw">رمز عبور</label>
+								<div style="position:relative;display:flex;width:100%;">
+									<div style="position:relative;width:100%"><input type="password" name="password"
+											class="form-control text-left" style="padding-left: 60px;"><input
+											type="hidden" id="passeye-0" value="Hamed13720620#hameD">
+										<div class="btn btn-primary btn-sm d-none" id="passeye-toggle-0"
+											style="position:absolute;left:10px;top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-o-transform:translate(0,-50%);padding: 2px 7px;font-size:12px;cursor:pointer;">
+											مشاهده</div>
+									</div>
+									<input type="hidden" id="passeye-0">
+									<div class="btn btn-primary btn-sm" id="passeye-toggle-0"
+										style="position:absolute;left:10px;top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-o-transform:translate(0,-50%);padding: 2px 7px;font-size:12px;cursor:pointer;z-index: -1;">
+										مشاهده</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="fw">تکرار رمز عبور</label>
+								<div style="position:relative;display:flex;width:100%;">
+									<div style="position:relative;width:100%"><input type="password"
+											name="confirm-password" class="form-control text-left"
+											style="padding-left: 60px;"><input type="hidden" id="passeye-1">
+										<div class="btn btn-primary btn-sm d-none" id="passeye-toggle-1"
+											style="position:absolute;left:10px;top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-o-transform:translate(0,-50%);padding: 2px 7px;font-size:12px;cursor:pointer;">
+											مشاهده</div>
+									</div>
+									<input type="hidden" id="passeye-0">
+									<div class="btn btn-primary btn-sm" id="passeye-toggle-0"
+										style="position:absolute;left:10px;top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-o-transform:translate(0,-50%);padding: 2px 7px;font-size:12px;cursor:pointer;z-index: -1;">
+										مشاهده</div>
+								</div>
+							</div>
+							<div class="form-group text-right">
+								<button class="btn btn-primary btn-block text-center">ثبت نام</button>
+							</div>
+							<div class="form-group text-center">
+								<span class="text-muted">قبلا ثبت نام کرده اید؟</span> <a href="login.html"
+									class="text-primary">ورود</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Start footer -->
+	<footer class="footer">
+
+	    <%- include("partials/footer.ejs") %>
+
+	</footer>
+	<!-- End Footer -->
+
+    <%- include("partials/scripts.ejs") %>
+
+</body>
+
+</html>

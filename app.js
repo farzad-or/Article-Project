@@ -14,39 +14,39 @@ const app = express();
 ////////////////////////////////////////setting up session////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-app.use(session({
-	key:"user_sid",
-	secret:"somerandomstuff",
-	resave: false,
-	saveUninitialized: false,
-    cookie: {
-		expires: 600000,
-    }
-}));
+// app.use(session({
+// 	key:"user_sid",
+// 	secret:"somerandomstuff",
+// 	resave: false,
+// 	saveUninitialized: false,
+//     cookie: {
+// 		expires: 600000,
+//     }
+// }));
 
 
 
-app.use(cookieParser());
+// app.use(cookieParser());
 
-app.use(function(req, res, next) {
-	if (req.cookies.user_sid && !req.session.user) {
-		res.clearCookie("user_sid");
-	};
+// app.use(function(req, res, next) {
+// 	if (req.cookies.user_sid && !req.session.user) {
+// 		res.clearCookie("user_sid");
+// 	};
 
-	next();
-});
+// 	next();
+// });
 
 
-app.use(function(req, res, next){
-	if(!req.cookies.lang){
-		req.cookies.lang="FA";
-		req.cookies.theme="light"
-		res.cookie("lang","FA")
-		res.cookie('theme',"light" );
-	}
+// app.use(function(req, res, next){
+// 	if(!req.cookies.lang){
+// 		req.cookies.lang="FA";
+// 		req.cookies.theme="light"
+// 		res.cookie("lang","FA")
+// 		res.cookie('theme',"light" );
+// 	}
 	
-	next();
-});
+// 	next();
+// });
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////view engine setup/////////////////////////////////////
@@ -89,6 +89,6 @@ app.use('/users', usersRouter);
 
 
 // module.exports = app;
-app.listen(3000,function(){
-console.log('up and running on 3000');
+app.listen(8000,function(){
+console.log('up and running on 8000');
 })
